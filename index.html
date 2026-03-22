@@ -3,33 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="culturama-favico.png">
+    <link rel="icon" href="culturama-favico.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Pesquisa culturama</title>
-     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      fieldset {
-        border: none;
-
-        & legend {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border-width: 0;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
-        <img src="img/logo-culturama.png" alt="logo_culturama">
+      <img src="img/logo-culturama.png" alt="logo_culturama" />
       <h1>Pesquisa Online</h1>
     </header>
     <main>
@@ -83,7 +69,12 @@
             <input type="radio" id="masc" name="userGender" value="masculino" />
             <label for="masc">Masculino</label>
 
-            <input type="radio" id="notInformed" name="userGender" value="notInformed" />
+            <input
+              type="radio"
+              id="notInformed"
+              name="userGender"
+              value="notInformed"
+            />
             <label for="notInformed">Prefiro não informar</label>
 
             <label for="maritalStatus">Estado civil</label>
@@ -135,13 +126,28 @@
 
             <p>Redes sociais:</p>
 
-            <input type="checkbox" id="instagram" name="social" value="instagram" />
+            <input
+              type="checkbox"
+              id="instagram"
+              name="social"
+              value="instagram"
+            />
             <label for="instagram">Instagram</label>
             <br />
-            <input type="checkbox" id="facebook" name="social" value="facebook" />
+            <input
+              type="checkbox"
+              id="facebook"
+              name="social"
+              value="facebook"
+            />
             <label for="facebook">Facebook</label>
             <br />
-            <input type="checkbox" id="linkedin" name="social" value="linkedin" />
+            <input
+              type="checkbox"
+              id="linkedin"
+              name="social"
+              value="linkedin"
+            />
             <label for="linkedin">Linkedin</label>
             <br />
             <input type="checkbox" id="twitter" name="social" value="twitter" />
@@ -149,17 +155,21 @@
             <br />
 
             <label for="musicStyle">Estilo musical:</label>
-            <input list="styleTypes" id="musicStyle" name="userMusicStyle" type="text">
+            <input
+              list="styleTypes"
+              id="musicStyle"
+              name="userMusicStyle"
+              type="text"
+            />
             <datalist id="styleTypes">
-                <option value="Rock">
-                <option value="Pop">
-                <option value="Samba">
-                <option value="Sertanejo">
+              <option value="Rock"></option>
+              <option value="Pop"></option>
+              <option value="Samba"></option>
+              <option value="Sertanejo"></option>
             </datalist>
 
             <label for="favoriteColor">Cor favorita:</label>
-            <input type="color" name="userFavoriteColor" id="favoriteColor">
-
+            <input type="color" name="userFavoriteColor" id="favoriteColor" />
           </fieldset>
 
           <fieldset>
@@ -167,35 +177,62 @@
 
             <p>O que você acha da qualidade do nosso serviço?</p>
 
-            <input type="radio" name="userOpinionGrade" id="ruim" value="ruim">
+            <input
+              type="radio"
+              name="userOpinionGrade"
+              id="ruim"
+              value="ruim"
+            />
             <label for="ruim">Ruim</label>
-            <br>
-            <input type="radio" name="userOpinionGrade" id="regular" value="regular">
+            <br />
+            <input
+              type="radio"
+              name="userOpinionGrade"
+              id="regular"
+              value="regular"
+            />
             <label for="regular">Regular</label>
-            <br>
-            <input type="radio" name="userOpinionGrade" id="boa" value="boa">
+            <br />
+            <input type="radio" name="userOpinionGrade" id="boa" value="boa" />
             <label for="boa">Boa</label>
-            <br>
-            <input type="radio" name="userOpinionGrade" id="otima" value="otima">
+            <br />
+            <input
+              type="radio"
+              name="userOpinionGrade"
+              id="otima"
+              value="otima"
+            />
             <label for="otima">Ótima</label>
-            <br>
+            <br />
 
             <label for="comment">Opinão detalhada:</label>
-            <textarea name="userComment" id="comment" placeholder="Digite aqui sua opinião..."></textarea>
-
+            <textarea
+              name="userComment"
+              id="comment"
+              placeholder="Digite aqui sua opinião..."
+            ></textarea>
           </fieldset>
 
           <fieldset>
-
             <legend>Confirmações</legend>
 
-            <input type="checkbox" name="userLgpd" id="userLgpdTerm" value="confirmed" required>
+            <input
+              type="checkbox"
+              name="userLgpd"
+              id="userLgpdTerm"
+              value="confirmed"
+              required
+            />
             <label for="userLgpdTerm">Eu aceito participar da pesquisa</label>
-            <br>
+            <br />
 
-            <input type="checkbox" name="userGetResult" id="getResult" value="confirmed">
+            <input
+              type="checkbox"
+              name="userGetResult"
+              id="getResult"
+              value="confirmed"
+            />
             <label for="getResult">Desejo receber o resultado por email</label>
-
           </fieldset>
 
           <button type="submit">Enviar</button>
