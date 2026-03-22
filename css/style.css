@@ -1,10 +1,40 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
   font-family: "Work Sans", sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+
+  & img {
+    width: 100px;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -12,16 +42,82 @@ h1 {
 }
 
 fieldset {
-  border: none;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
 
   & legend {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+    font-weight: 700;
+    padding: 0 10px;
+    font-size: 18px;
+  }
+}
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+
+  &:invalid {
+    & + label::after {
+      content: "Obrigatório*";
+      color: red;
+      margin-left: 10px;
+      font-size: 10px;
+    }
+  }
+}
+
+textarea {
+  min-height: 100px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: fit-content;
+  margin-right: 5px;
+}
+
+input[type="color"] {
+  padding: 0 2px;
+}
+
+label {
+  width: 100%;
+  margin-bottom: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+button {
+  padding: 8px 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all .5s ease;
+  cursor: pointer;
+
+  &:hover {
+    &[type="submit"]{
+        background-color: #2ac62f;
+        color: #fff;
+    }
+
+    &[type="reset"]{
+        background-color: #c62a2a;
+        color: #fff;
+    }
   }
 }
