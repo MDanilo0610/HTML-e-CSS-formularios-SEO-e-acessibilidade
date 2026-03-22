@@ -23,6 +23,7 @@ header {
 
 main {
   width: 100%;
+  height: 100%;
   max-width: 700px;
 }
 
@@ -66,14 +67,6 @@ textarea {
   border-radius: 5px;
   position: relative;
 
-  &:invalid {
-    & + label::after {
-      content: "Obrigatório*";
-      color: red;
-      margin-left: 10px;
-      font-size: 10px;
-    }
-  }
 }
 
 textarea {
@@ -95,6 +88,13 @@ label {
   margin-bottom: 5px;
   width: fit-content;
   cursor: pointer;
+
+  &:has(+ input:invalid)::after {
+    content: "Obrigatório*";
+    color: red;
+    margin-left: 10px;
+    font-size: 10px;
+  }
 }
 
 p {
@@ -106,18 +106,18 @@ button {
   padding: 8px 20px;
   border: 2px solid #ccc;
   border-radius: 5px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
 
   &:hover {
-    &[type="submit"]{
-        background-color: #2ac62f;
-        color: #fff;
+    &[type="submit"] {
+      background-color: #2ac62f;
+      color: #fff;
     }
 
-    &[type="reset"]{
-        background-color: #c62a2a;
-        color: #fff;
+    &[type="reset"] {
+      background-color: #c62a2a;
+      color: #fff;
     }
   }
 }
