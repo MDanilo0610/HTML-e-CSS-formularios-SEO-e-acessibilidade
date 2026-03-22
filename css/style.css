@@ -83,6 +83,14 @@ input[type="color"] {
   padding: 0 2px;
 }
 
+input[type="tel"] {
+  margin-bottom: 0;
+}
+
+small {
+  margin-bottom: 20px;
+}
+
 label {
   width: 100%;
   margin-bottom: 5px;

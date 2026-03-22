@@ -50,8 +50,10 @@
               maxlength="11"
               pattern="[0-9]{11}"
               placeholder="DDD + números sem espaços ou hífen"
+              aria-describedby="phoneHelper"
               required
             />
+            <small id="phoneHelper">Preencha com 11 digitos no formato: DDD + números sem espaços ou hífen</small>
 
             <label for="image">Upload de imagem</label>
             <input id="image" type="file" accept="image/*" name="userImage" />
